@@ -1,0 +1,332 @@
+@use './variable/' as *;
+@use './function/' as *;
+
+/* bs換圖輪播 */
+//img需要自動fill到區塊內，所以要設定object-fit
+.carousel {
+    .carousel-item {
+        height: calc(100vh - 3.5rem);
+
+        img {
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+}
+
+/* bs navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    height: 3.5rem;
+    z-index: $z-ex;
+
+    .navbar-brand {
+        img {
+            height: 2rem;
+        }
+    }
+
+    @media($media-md) {
+        .navbar-nav {
+            padding: $space-s;
+            background-color: $alpha-b60;
+        }
+    }
+
+    .btn-search-w {
+        width: 5rem;
+    }
+
+    .icon {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+
+        @media($media-md-up) {
+            position: absolute;
+            right: 20px;
+        }
+
+        a {
+            font-size: map-get($font-size, l);
+            color: $color-light;
+            padding-right: 1rem;
+
+            &:hover {
+                color: $color-grey;
+            }
+        }
+
+    }
+}
+
+/* 共用區 */
+/* 區塊標題 */
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before,
+    &::after {
+        content: "";
+        // width: calc(50% - 4rem);
+        width: 40%;
+        height: 3px;
+        background-color: $color-deep;
+
+        @media($media-md) {
+            width: 35%;
+
+            @media($media-sm) {
+                width: 30%;
+            }
+        }
+    }
+
+    h2 {
+        width: 20%;
+        text-align: center;
+        font-size: map-get($font-size, l);
+        padding: 1rem;
+
+        @media($media-md) {
+            width: 30%;
+        }
+
+        @media ($media-sm) {
+            width: 40%;
+        }
+
+        span {
+            display: block;
+            text-align: center;
+            font-size: map-get($font-size, s);
+        }
+
+    }
+}
+
+// IMG
+section {
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+#new,
+#hot {
+    a {
+        position: relative;
+        display: block;
+    }
+}
+
+.list-title {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $alpha-b60;
+    color: $color-light;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transition: $speed-slow;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+/* 最新商品 */
+#new {
+    .mask {
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        mask-position: center;
+    }
+
+    .mask-1 {
+        mask-image: url(../images/blobs-1.svg);
+    }
+
+    .mask-2 {
+        mask-image: url(../images/blobs-2.svg);
+    }
+
+    .mask-3 {
+        mask-image: url(../images/blobs-3.svg);
+    }
+}
+
+/* 熱門商品 */
+#hot {
+    .clip {
+        clip-path: circle(49%); // 圓形  
+        // clip-path: ellipse(30% 50% at 50% 50%);// 橢圓形
+        // clip-path: inset(5% 20% 15% 10%);// 四個邊的位置(不是點)
+        // clip-path: polygon(50% 0, 0 80%, 100% 80%);// 三角形
+        // clip-path: polygon(20% 0,100% 0, 80% 100%, 0 100%); // 梯形
+    }
+}
+
+/* 全部產品 */
+#all {
+
+    @media($media-xl) {
+        .col-my-5 {
+            width: 20%;
+        }
+    }
+}
+
+/* product-page */
+#product-detail {
+    .detail-box {
+        display: flex;
+        width: 80%;
+        margin: $space-x-a;
+
+        >div {
+            flex: 1;
+        }
+
+        // 頁籤相簿
+        #album {
+            display: flex;
+            height: 70vh;
+
+
+
+            img {
+                object-fit: cover; // 圖片填滿
+                height: 100%;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                width: 80px;
+            }
+        }
+
+        // 產品詳情
+        .content {
+            h1 {
+                font-size: map-get($font-size, l);
+            }
+
+            .price {
+                del {
+                    font-size: map-get($font-size, xs);
+                }
+
+                mark {
+                    background-color: #23f444;
+                }
+            }
+
+            p {
+                margin: 1rem 0;
+                font-size: map-get($font-size, xs);
+            }
+
+            h4 {
+                font-size: map-get($font-size, xs);
+            }
+
+            .btnbox {
+                margin-bottom: 1.5rem;
+            }
+            button{
+                cursor: pointer;
+            }
+
+            .active {
+                border: 1px solid $color-deep;
+            }
+
+            .disabled {
+                cursor: auto;
+                opacity: .5;
+            }
+
+            .size {
+                font-size: map-get($font-size, xs);
+
+                button {
+                    width: 2rem;
+                    border: 1px solid $color-grey;
+                }
+
+            }
+            .color{
+                button{
+                    width: 24px;
+                    height: 24px;
+                    border: 1px solid $color-grey;
+                    &:nth-child(1){
+                        background-color: rgb(69, 64, 38);
+                    }
+                    &:nth-child(2){
+                        background-color: rgb(255, 247, 182);
+                    }
+                    &:nth-child(3){
+                        background-color: rgb(123, 79, 8);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// jquery ui tab
+// 主框架
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+    border: 1px solid $color-deep;
+    background: $color-light;
+
+}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    padding: 0; // img與border內距取消
+}
+
+.ui-tabs .ui-tabs-nav li {
+    border-bottom-width: 1px; // 把邊框加回來
+    border-radius: 5px; // 修改四邊圓角
+    overflow: hidden; // 縮圖超過邊框隱藏
+}
+
+.ui-tabs .ui-tabs-nav li .ui-tabs-active {
+    // 修改間距
+    margin-bottom: 1px;
+    padding-bottom: 0;
+}
+
+.ui-tabs .ui-tabs-panel {
+    padding: 0;
+    // 不要內距，與框貼齊
+}
+
+.ui-widget.ui-widget-content {
+    border: none;
+}
+
+
+footer {
+    text-align: center;
+}
