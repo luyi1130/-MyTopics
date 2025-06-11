@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>小書齋</title>
-  <link rel="stylesheet" href="styles/main.css">
+  <title>小書齋｜手寫的溫度</title>
+  <link rel="stylesheet" href="./css/style.min.css">
 <!-- 網頁 icon -->
 <link rel="icon" href="favicon.ico">
+<link href="hhttps://fonts.googleapis.com/css2?family=Italiana&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Header -->
@@ -23,21 +24,66 @@
     <!-- Left Block -->
     <section class="left">
       <h2>傳承</h2>
-      <p class="subtitle">(Traditional)</p>
+      <div class="subtitle">(Traditional)</div>
     </section>
 
     <!-- Center Image -->
     <section class="center">
-      <img src="images/brush-hand.jpg" alt="書法筆" />
+      <img class="fade-in" src="images/brush-hand.jpg" alt="書法筆" />
     </section>
 
     <!-- Right Block -->
     <section class="right">
       <p>
-        以書法藝術為媒介，傳遞文化的深度與美感。我們致力於保存並推廣傳統書法的精神，讓更多人能夠體驗到這門古老藝術的魅力。
+        小書齋創立於屏東的一個小鎮-潮州。在小鎮默默推廣及耕耘書畫藝術創作，每張作品皆為親手書寫及獨家創作，
+        <br>希望可以讓更多人感受書畫藝術的創作活力及手寫的溫度。
       </p>
+      <div class="info">Xiaoshuzhai was founded in a small town called Chaozhou in Pingtung. 
+        Quietly promoting and cultivating calligraphy and painting art in the town, 
+        each piece is handwritten and uniquely created. We hope to let more people experience 
+        the vitality of artistic creation and the warmth of handwritten works.</div>
       <a href="#">About us</a>
     </section>
   </main>
-</body>
-</html>
+  <section class="custom-service">
+    <h2 class="fade-in">服務<span class="subtitle">(Services)</span></h2>
+    <ol>
+      <li class="fade-in"><a href="index.html">首頁</a></li>
+      <li class="fade-in"><a href="about.html">關於我們</a></li>
+      <li class="fade-in"><a href="service.html">客製化服務</a></li>
+      <li class="fade-in"><a href="shop.html">線上商店</a></li>
+      <li class="fade-in"><a href="contact.html">聯絡我們</a></li>
+    </ol>
+  </section>
+  <script>
+    function isInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top < window.innerHeight && rect.bottom > 0
+      );
+    }
+    
+    function checkFadeIn() {
+      document.querySelectorAll('.fade-in').forEach(el => {
+        if (isInViewport(el)) {
+          el.classList.add('visible');
+        }
+      });
+    }
+    
+    window.addEventListener('scroll', checkFadeIn);
+    window.addEventListener('resize', checkFadeIn);
+    document.addEventListener('DOMContentLoaded', checkFadeIn);
+    </script>
+    // ... existing code ...
+  <section class="product-detail">
+    <div class="product-info">
+      <h3>虎年小卷軸 附錦緞收藏盒</h3>
+      <div class="size">尺寸：25×6×15</div>
+      <div class="desc">
+        內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文
+        內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內
+        內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文
+        內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文
+        內文內文內文內文內文內文
+      </div>
