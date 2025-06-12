@@ -14,7 +14,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- 置入字體 -->
   <link
-    href="hhttps://fonts.googleapis.com/css2?family=Italiana&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Italiana&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
     rel="stylesheet">
 </head>
 
@@ -58,11 +58,12 @@
   </main>
   <section class="custom-service">
     <h2 class="fade-in">服務<span class="subtitle">(Services)</span></h2>
+    <div class="service-image fade-in"></div>
     <ol>
-      <li class="fade-in"><a href="index.html">首頁</a></li>
+      <!-- <li class="fade-in"><a href="index.html">首頁</a></li> -->
       <li class="fade-in"><a href="about.html">關於我們</a></li>
       <li class="fade-in"><a href="service.html">客製化服務</a></li>
-      <li class="fade-in"><a href="shop.html">線上商店</a></li>
+      <li class="fade-in"><a href="product-page.html">線上展示</a></li>
       <li class="fade-in"><a href="contact.html">聯絡我們</a></li>
     </ol>
   </section>
@@ -113,8 +114,8 @@
               <img src="images/PD2.png" class="d-block w-100" alt="產品圖片2" />
             </div>
             <div class="col-md-6 product-info">
-              <h3>產品二標題</h3>
-              <div class="size">尺寸：XX×XX×XX cm</div>
+              <h3>虎臨寶地 幸福好年</h3>
+              <div class="size">尺寸：26x69 cm</div>
               <div class="desc">產品二的描述文字…</div>
             </div>
           </div>
@@ -126,7 +127,8 @@
               <img src="images/PD3.png" class="d-block w-100" alt="產品圖片3" />
             </div>
             <div class="col-md-6 product-info">
-              <h3>產品三標題</h3>
+              <h3>招財進寶 虎年財旺</h3>
+              <P>手工萱紙 手寫春聯</P>
               <div class="size">尺寸：XX×XX×XX cm</div>
               <div class="desc">產品三的描述文字…</div>
             </div>
@@ -165,6 +167,47 @@
   <script src="./JS/script.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <footer class="custom-footer">
+    <div class="footer-left">
+      <h2>聯絡我們 <span class="en">(Contact us)</span></h2>
+      <div class="footer-block">
+        <div class="footer-title">{ 線上販售 }</div>
+        <div class="footer-links">
+          <a href="https://shopee.tw/" target="_blank"><img src="images/shopee.png" alt="蝦皮購物" class="big-logo"></a>
+          <a href="https://www.pinkoi.com/store/xiao-shu-zhai" target="_blank"><img src="images/pinkoi.png" alt="pinkoi" class="big-logo"></a>
+        </div>
+      </div>
+      <div class="footer-block">
+        <div class="footer-title">{ 聯絡資訊 }</div>
+        <div class="footer-links">
+          <a href="https://lin.ee/EKAKoGb" target="_blank"><img src="images/line.png" alt="LINE@" class="big-logo"></a>
+          <a href="https://www.facebook.com/XiaoShuZhai5520" target="_blank"><img src="images/fb.png" alt="LINE@" class="big-logo"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-right">
+      <img src="images/footer-logo.svg" alt="小書齋LOGO" class="footer-logo">
+      <!-- <div class="footer-social">
+        <a href="#" target="_blank"><img src="images/icon-fb.svg" alt="Facebook"></a>
+        <a href="#" target="_blank"><img src="images/ig.png" alt="Instagram"></a>
+      </div> -->
+    </div>
+  </footer>
+
+  <style>
+    .footer-links img.big-logo {
+      max-height: 72px;
+      max-width: 220px;
+    }
+    @media (max-width: 600px) {
+      .footer-links img.big-logo {
+        max-height: 48px;
+        max-width: 140px;
+      }
+    }
+  </style>
+
 </body>
 
 </html>
