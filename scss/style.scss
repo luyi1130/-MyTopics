@@ -1,5 +1,4 @@
-@use './variable/' as *;
-@use './function/' as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Italiana&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap');
 
 @keyframes fadeIn {
@@ -13,7 +12,9 @@
     transform: translateY(0);
   }
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   font-family: 'Noto Serif JP', serif;
@@ -268,7 +269,7 @@ body *:not(:lang(zh)):not(:lang(ja)):not(:lang(ko)) {
 }
 
 .custom-service ol li a:hover {
-  color: #f5ede3;
+  color: #886c65;
   text-decoration: none;
 }
 

@@ -10,6 +10,10 @@
     transform: translateY(0);
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Noto Serif JP", serif;
@@ -237,7 +241,7 @@ body *:not(:lang(zh)):not(:lang(ja)):not(:lang(ko)) {
 }
 
 .custom-service ol li a:hover {
-  color: #f5ede3;
+  color: #886c65;
   text-decoration: none;
 }
 
@@ -437,3 +441,5 @@ body *:not(:lang(zh)):not(:lang(ja)):not(:lang(ko)) {
     height: 28px;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
