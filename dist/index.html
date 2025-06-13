@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>小書齋｜手寫的溫度</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+  <!-- 網頁 icon -->
+  <link rel="icon" href="favicon.ico">
+  <!-- 換圖輪播CSS -->
+  <link rel="stylesheet" href="./css/carosel.css">
+  <!-- 換圖輪播 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- 置入字體 -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Italiana&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <img src="images/logo.svg" alt="書法 Logo" class="logo" />
+    <div class="title-block">
+      <h1>書法</h1>
+      <div class="subtitle">(Traditional)</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fermentum turpis ac ligula dapibus, ut efficitur
+        arcu interdum.</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Left Block -->
+    <section class="left">
+      <h2>傳承</h2>
+      <div class="subtitle">(calligraphy)</div>
+    </section>
+
+    <!-- Center Image -->
+    <section class="center">
+      <img class="fade-in" src="images/brush-hand.jpg" alt="書法筆" />
+    </section>
+
+    <!-- Right Block -->
+    <section class="right">
+      <p>
+        小書齋創立於屏東的一個小鎮-潮州。在小鎮默默推廣及耕耘書畫藝術創作，每張作品皆為親手書寫及獨家創作，
+        <br>希望可以讓更多人感受書畫藝術的創作活力及手寫的溫度。
+      </p>
+      <div class="info">Xiaoshuzhai was founded in a small town called Chaozhou in Pingtung.
+        Quietly promoting and cultivating calligraphy and painting art in the town,
+        each piece is handwritten and uniquely created. We hope to let more people experience
+        the vitality of artistic creation and the warmth of handwritten works.</div>
+      <a href="#">About us</a>
+    </section>
+  </main>
+  <section class="custom-service">
+    <h2 class="fade-in">服務<span class="subtitle">(Services)</span></h2>
+    <div class="service-image fade-in"></div>
+    <ol>
+      <!-- <li class="fade-in"><a href="index.html">首頁</a></li> -->
+      <li class="fade-in"><a href="about.html">關於我們</a></li>
+      <li class="fade-in"><a href="service.html">客製化服務</a></li>
+      <li class="fade-in"><a href="product-page.html">線上展示</a></li>
+      <li class="fade-in"><a href="custom-footer">聯絡我們</a></li>
+    </ol>
+  </section>
+  <script>
+    function isInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top < window.innerHeight && rect.bottom > 0
+      );
+    }
+
+    function checkFadeIn() {
+      document.querySelectorAll('.fade-in').forEach(el => {
+        if (isInViewport(el)) {
+          el.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkFadeIn);
+    window.addEventListener('resize', checkFadeIn);
+    document.addEventListener('DOMContentLoaded', checkFadeIn);
+  </script>
+
+  <!-- 輪播區塊：滿版黑底 -->
+  <section class="product-carousel fade-in">
+    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <img src="images/PD1.png" class="d-block w-100" alt="產品圖片1" />
+            </div>
+            <div class="col-md-6 product-info">
+              <h3>虎年小卷軸 附錦緞收藏盒</h3>
+              <div class="size">尺寸：25×6×15 cm</div>
+              <div class="desc">
+                迎虎納福，藏藝於卷。為迎接虎年的祥瑞之氣，我們推出限量「虎年書法小卷軸」…
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <img src="images/PD2.png" class="d-block w-100" alt="產品圖片2" />
+            </div>
+            <div class="col-md-6 product-info">
+              <h3>虎臨寶地 幸福好年</h3>
+              <div class="size">尺寸：26x69 cm</div>
+              <div class="desc">產品二的描述文字…</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <img src="images/PD3.png" class="d-block w-100" alt="產品圖片3" />
+            </div>
+            <div class="col-md-6 product-info">
+              <h3>招財進寶 虎年財旺</h3>
+              <P>手工萱紙 手寫春聯</P>
+              <div class="size">尺寸：XX×XX×XX cm</div>
+              <div class="desc">產品三的描述文字…</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">上一張</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">下一張</span>
+      </button>
+    </div>
+  </section>
+
+
+  <!-- jQuery CDN要先執行 -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  <!-- 套用jQuery smoove CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
+
+  <!-- 換圖輪播 jQuery -->
+  <script src="./JS/carosel.js"></script>
+
+  <!-- 淡出淡入 jQuery -->
+  <script src="./JS/fade.js"></script>
+
+
+  <!-- 自訂的js(一定要放在最下面) -->
+  <script src="./JS/script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <footer class="custom-footer">
+    <div class="footer-left">
+      <h2>聯絡我們 <span class="en">(Contact us)</span></h2>
+      <div class="footer-block">
+        <div class="footer-title">{ 線上販售 }</div>
+        <div class="footer-links">
+          <a href="https://shopee.tw/" target="_blank"><img src="images/shopee.png" alt="蝦皮購物" class="big-logo"></a>
+          <a href="https://www.pinkoi.com/store/xiao-shu-zhai" target="_blank"><img src="images/pinkoi.png" alt="pinkoi" class="big-logo"></a>
+        </div>
+      </div>
+      <div class="footer-block">
+        <div class="footer-title">{ 聯絡資訊 }</div>
+        <div class="footer-links">
+          <a href="https://lin.ee/EKAKoGb" target="_blank"><img src="images/line.png" alt="LINE@" class="big-logo"></a>
+          <a href="https://www.facebook.com/XiaoShuZhai5520" target="_blank"><img src="images/fb.png" alt="LINE@" class="big-logo"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-right">
+      <img src="images/footer-logo.svg" alt="小書齋LOGO" class="footer-logo">
+      <!-- <div class="footer-social">
+        <a href="#" target="_blank"><img src="images/icon-fb.svg" alt="Facebook"></a>
+        <a href="#" target="_blank"><img src="images/ig.png" alt="Instagram"></a>
+      </div> -->
+    </div>
+  </footer>
+
+  <style>
+    .footer-links img.big-logo {
+      max-height: 72px;
+      max-width: 220px;
+    }
+    @media (max-width: 600px) {
+      .footer-links img.big-logo {
+        max-height: 48px;
+        max-width: 140px;
+      }
+    }
+  </style>
+
+</body>
+
+</html>

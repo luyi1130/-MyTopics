@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯絡我們 | 小書齋</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+            margin: 0;
+            min-height: 100vh;
+            font-family: 'Noto Serif JP', serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .service-contact-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex: 1;
+            padding: 60px 8vw 40px 8vw;
+            min-height: 600px;
+        }
+        .service-contact-left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 48px;
+        }
+        .service-contact-left h2 {
+            font-size: 3rem;
+            font-weight: 400;
+            margin-bottom: 32px;
+            letter-spacing: 2px;
+        }
+        .service-contact-left .en {
+            font-family: 'Italiana', serif;
+            font-size: 2rem;
+            font-weight: 300;
+            margin-left: 12px;
+        }
+        .service-block {
+            margin-bottom: 32px;
+        }
+        .service-title {
+            font-size: 1.5rem;
+            margin-bottom: 18px;
+            letter-spacing: 2px;
+        }
+        .service-links {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 12px;
+        }
+        .service-links img.big-logo {
+            max-height: 72px;
+            max-width: 220px;
+        }
+        .service-links a:hover img {
+            transform: scale(1.08);
+        }
+        .service-links img {
+            max-height: 48px;
+            max-width: 160px;
+            object-fit: contain;
+            background: none;
+            transition: transform 0.2s;
+        }
+        .service-contact-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+        }
+        .service-logo {
+            width: 420px;
+            max-width: 90vw;
+            height: auto;
+            margin-bottom: 32px;
+        }
+        @media (max-width: 900px) {
+            .service-contact-main {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 40px 4vw 24px 4vw;
+            }
+            .service-contact-right {
+                align-items: flex-start;
+                margin-top: 32px;
+            }
+            .service-logo {
+                width: 220px;
+            }
+        }
+        @media (max-width: 600px) {
+            .service-contact-main {
+                padding: 24px 2vw 16px 2vw;
+            }
+            .service-contact-left h2 {
+                font-size: 2rem;
+            }
+            .service-title {
+                font-size: 1.1rem;
+            }
+            .service-links img.big-logo {
+                max-height: 48px;
+                max-width: 140px;
+            }
+            .service-links img {
+                max-height: 32px;
+                max-width: 100px;
+            }
+            .service-logo {
+                width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="service-contact-main">
+        <div class="service-contact-left">
+            <h2>聯絡我們 <span class="en">(Contact us)</span></h2>
+            <div class="service-block">
+                <div class="service-title">{ 線上販售 }</div>
+                <div class="service-links">
+                    <a href="https://shopee.tw/" target="_blank"><img src="images/shopee.png" alt="蝦皮購物" class="big-logo"></a>
+                    <a href="https://www.pinkoi.com/store/xiao-shu-zhai" target="_blank"><img src="images/pinkoi.png" alt="pinkoi" class="big-logo"></a>
+                </div>
+            </div>
+            <div class="service-block">
+                <div class="service-title">{ 聯絡資訊 }</div>
+                <div class="service-links">
+                    <a href="https://lin.ee/EKAKoGb" target="_blank"><img src="images/line.png" alt="LINE@" class="big-logo"></a>
+                    <a href="https://www.facebook.com/XiaoShuZhai5520" target="_blank"><img src="images/fb.png" alt="Facebook" class="big-logo"></a>
+                </div>
+            </div>
+        </div>
+        <div class="service-contact-right">
+            <img src="images/footer-logo.svg" alt="小書齋LOGO" class="service-logo">
+        </div>
+    </main>
+</body>
+</html>
